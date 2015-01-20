@@ -1,0 +1,14 @@
+This repository includes scripts and data files to perform the automated iceberg tracking on the TRI data. Requires Python, NumPy, SciPy, Matplotlib. The included settings are those used in the manuscript. Settings can be modified by following comments inside the scripts.
+
+
+1. Use "run_detection_scipy30m.py" to do the processing. The recscipy folder should be present, but empty. This depends on the "2012maskT.png" as the masking files to get rid of the glacier and the moraine deposits. This fills the recscipy folder with the iceberg centroid data.
+
+2. Use "interp_vel_scipy30m.py" to generate the current maps and figures. This needs the "arrow" folder to be empty. This depends on the "2012maskT.png" as the mask and on the "bgm1a.png" as the background image. This fills the arrow folder with the interpolated current maps.
+
+3. The "get_image.py" script gets the properly-formatted and styled images for the side-by-side intensity and current arrow images. Requries "arroworig" folder to be empty. This preapres the images for the side-by-side comparison given in the supplementary video.
+
+4. The "plot_errell.py" script uses one set of measurements and performs the Monte Carlo simulation, and plots the error ellipses.
+
+Results from 2 and 3 can be merged to replicate the animated figure in the supplementary materials.
+
+
